@@ -76,3 +76,21 @@ const printAnimalInfo = (animal: IAnimal) => {
 }
 
 animal.forEach(element => printAnimalInfo(element));
+
+//Implement Interface:
+interface IUserInfo {
+  formatter: () => string;
+}
+
+// When we implement an interface, the class must implement all properties and methods defined in it
+class userInfo implements IUserInfo{
+  constructor(private name: string, private age: number) { }
+  
+  formatter = () => {
+    return `User name is ${this.name} and age is ${this.age}`
+  }
+}
+
+let userInfo1 = new userInfo("Subrata Biswas", 26);
+console.log(userInfo1);
+console.log(userInfo1.formatter())

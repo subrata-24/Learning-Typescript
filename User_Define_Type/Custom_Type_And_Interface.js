@@ -37,3 +37,18 @@ var printAnimalInfo = function (animal) {
     console.log("ID: ".concat(animal.id, ", name: ").concat(animal.name, ", age: ").concat(animal.age));
 };
 animal.forEach(function (element) { return printAnimalInfo(element); });
+// When we implement an interface, the class must implement all properties and methods defined in it
+var userInfo = /** @class */ (function () {
+    function userInfo(name, age) {
+        var _this = this;
+        this.name = name;
+        this.age = age;
+        this.formatter = function () {
+            return "User name is ".concat(_this.name, " and age is ").concat(_this.age);
+        };
+    }
+    return userInfo;
+}());
+var userInfo1 = new userInfo("Subrata Biswas", 26);
+console.log(userInfo1);
+console.log(userInfo1.formatter());
