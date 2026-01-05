@@ -51,3 +51,28 @@ makeRequest("POST");
   - They are highly effective for configuration settings, API methods, 
   and UI states (e.g., "loading" | "success" | "error").
  */
+
+
+//Interface:
+interface IAnimal { id: number, name: string, age: number }
+let animal1: IAnimal = {
+  id: 24,
+  name: "Kutta",
+  age: 15
+}
+
+let animal2: IAnimal = {
+  id: 25,
+  name: "Biral",
+  age:5
+}
+
+let animal: IAnimal[] = [];
+animal.push(animal1);
+animal.push(animal2);
+
+const printAnimalInfo = (animal: IAnimal) => {
+  console.log(`ID: ${animal.id}, name: ${animal.name}, age: ${animal.age}`)
+}
+
+animal.forEach(element => printAnimalInfo(element));

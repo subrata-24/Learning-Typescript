@@ -15,7 +15,7 @@ var CardinalDirections;
     'currentDirection' is typed as the Enum 'CardinalDirections'.
     While it holds a number, TypeScript treats it as a member of this specific group.We cannot change the Enum definition (CardinalDirections.North = 3) because Enum members are read-only.
 */
-var currentDirection = CardinalDirections.North;
+let currentDirection = CardinalDirections.North;
 console.log(currentDirection); // Logs 0
 // 2. Custom Numeric Values
 var statusCode;
@@ -49,9 +49,11 @@ var user;
     user[user["id2"] = 34] = "id2";
     user[user["id3"] = 35] = "id3"; // Auto-increments from 34: becomes 35
 })(user || (user = {}));
+export {};
 /**
  - Numeric Enums: Support "Reverse Mapping" (we can get the name from the number).
  - String Enums: Do NOT support reverse mapping but are easier to read in logs.
  - Mixed Enums: Generally discouraged in professional code as they lead to confusion.It is better to stay consistent with one type.
  - Const Enums: Use 'const enum' if you want to improve performance by removing the Enum object entirely during compilation.
  */ 
+//# sourceMappingURL=Enums_Type.js.map
