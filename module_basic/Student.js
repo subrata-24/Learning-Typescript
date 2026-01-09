@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.studentage = exports.studentName = void 0;
-exports.studentName = "Subrata Biswas";
-exports.studentage = 26;
+export let studentName = "Subrata Biswas";
+export let studentage = 26;
+//# sourceMappingURL=Student.js.map

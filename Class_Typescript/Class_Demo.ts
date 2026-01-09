@@ -17,6 +17,9 @@ class Person {
 }
 
 const person = new Person("Jane");
+let personArray: Person[] = [];//Only the object get from Person  class can be the member of this array.
+personArray.push(person); // valid
+// personArray.push("Subrata"); // Invalid
 console.log(person.getName()); 
 // console.log(person.name); // Error: Property 'name' is private and only accessible within class 'Person'.
 

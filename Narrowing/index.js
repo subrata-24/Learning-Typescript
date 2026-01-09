@@ -1,6 +1,7 @@
 function printTodos(todos) {
     if (todos) { // Truthy / falsy narrowing
         if (typeof todos === "object") { // typeof narrowing
+            // Array.isArray() -> Array narrowing
             todos.map(function (todo) { return console.log(todo); });
         }
         else {

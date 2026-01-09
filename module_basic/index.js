@@ -1,9 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Student_1 = require("./Student"); //Can also use alias
-var student = require("./Student");
+import { studentage, studentName as name } from "./Student"; //Can also use alias
+import * as student from './Student';
 function displayInfo() {
-    console.log("Srudent name is ".concat(Student_1.studentName, " and student age is ").concat(Student_1.studentage));
-    console.log("Name: ".concat(student.studentName, " and age ").concat(student.studentage));
+    console.log(`Srudent name is ${name} and student age is ${studentage}`);
+    console.log(`Name: ${student.studentName} and age ${student.studentage}`);
 }
 displayInfo();
+//# sourceMappingURL=index.js.map
